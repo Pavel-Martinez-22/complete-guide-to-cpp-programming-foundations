@@ -12,7 +12,7 @@ int main(){
 
     std::cout << "Second high score using pointer: " << *(scorePtr + 1) << std::endl; 
 
-    std::cout << "Third high score using pointer: " << scorePtr[2] << std::endl; 
+    std::cout << "Third high score using pointer: " << scorePtr[2] << std::endl; // Array-like indexing with pointer different syntax to access third element
 
 
     std::cout << std::endl << std::endl;
