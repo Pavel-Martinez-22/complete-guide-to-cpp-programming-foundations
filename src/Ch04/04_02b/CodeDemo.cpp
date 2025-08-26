@@ -9,7 +9,8 @@ int main(){
     int a = 37;
     int *ptr;
 
-    ptr = &a;
+    //ptr is pointing to address of a or ptr is pointing to a
+    ptr = &a; // In this situation & signifies "address of" operator
 
     std::cout << "             The value of a is " << a << std::endl;
     std::cout << "    ptr is pointing to address " << ptr << std::endl;
