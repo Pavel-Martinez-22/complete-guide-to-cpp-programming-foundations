@@ -9,7 +9,9 @@
 std::vector<int> SelectKeyPoints(std::vector<int> distances, int checkpointIndex){
     std::vector<int> result;
 
-    // Write your code here
+     result.push_back(distances.front());//Add first element or you can use *distances.begin(), use a dereference operator because begin() returns an iterator
+     result.push_back(distances[checkpointIndex]); //Add element at checkpointIndex
+     result.push_back(distances.back()); //Add last element *(distances.end() - 1) because end() points to one past the last element, use the dereference operator because end() returns an iterator
     
     return result;
 }

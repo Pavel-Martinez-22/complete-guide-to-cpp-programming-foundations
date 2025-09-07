@@ -15,7 +15,20 @@ struct Resource{
 double CalculateTotalCost(std::vector<Resource> resources){
     double result = 0.0;
     
-    // Write your code here
+    for(const auto& resource : resources){
+
+        double costWithTax = resource.baseCost;
+    
+        if(resource.type == 'B'){ // Basic resource: 5% tax
+            costWithTax += resource.baseCost * 0.05;
+        }else if (resource.type == 'L'){ // Luxury resource: 15% tax
+            costWithTax += resource.baseCost * 0.15;
+        }
+        // Essential resource 'E' has no tax, so no change is needed
+
+        result += costWithTax;
+
+    }
     
     return result;
 }

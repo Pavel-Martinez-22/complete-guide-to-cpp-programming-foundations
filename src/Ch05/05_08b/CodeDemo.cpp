@@ -10,9 +10,11 @@ int main(){
     float average;
 
     average = 0.0f;
-    for (int i = 0; i < lapTimes.size(); i++)
-        average += lapTimes[i];
+    for (auto x : lapTimes)
+        average += x;
+
     average /= lapTimes.size();
+
     std::cout << "Average Lap Time: " << average << std::endl;
 
     std::cout << std::endl << std::endl;
